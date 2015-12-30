@@ -1,0 +1,9 @@
+html_document:
+ toc: true
+ toc_length: 2
+ number_section: false
+ smart: true
+ keep.md: false
+ theme: null
+ highlight: tango
+ css: toolstyles.css
