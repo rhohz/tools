@@ -1,0 +1,55 @@
+.title {
+  color: blue;
+  font-size: 45px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.author {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+.date {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+#TOC ul li a {
+  color: green;
+}
+
+h1 {
+  font-family: "sans-serif";
+  font-size: 35px;
+  font-weight: 900;
+  color: darkblue;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+body{
+counter-reset:table figure;
+}
+
+caption::before{
+counter-increment: table;
+content: "表 " counter(table) ": ";
+}
+
+.caption::before{
+counter-increment: figure;
+content: "图 " counter(figure) ": ";
+}
+
+
