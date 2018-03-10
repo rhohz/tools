@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>R Installation</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+
+
+<link href="data:text/css;charset=utf-8,%2Etitle%20%7B%0Acolor%3A%20darkblue%3B%0Afont%2Dsize%3A%2045px%3B%0Afont%2Dweight%3A%20900%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%2Eauthor%20%7B%0Acolor%3A%20black%3B%0Afont%2Dsize%3A%2030px%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%2Edate%20%7B%0Acolor%3A%20black%3B%0Afont%2Dsize%3A%2030px%3B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20ul%20li%20a%20%7B%0Acolor%3A%20green%3B%0A%7D%0Ah1%20%7B%0Afont%2Dfamily%3A%20%22sans%2Dserif%22%3B%0Afont%2Dsize%3A%2035px%3B%0Afont%2Dweight%3A%20900%3B%0Acolor%3A%20darkblue%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2030px%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2030px%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%7B%0Acounter%2Dreset%3Atable%20figure%3B%0A%7D%0Acaption%3A%3Abefore%7B%0Acounter%2Dincrement%3A%20table%3B%0Acontent%3A%20%22table%20%22%20counter%28table%29%20%22%3A%20%22%3B%0A%7D%0A%2Ecaption%3A%3Abefore%7B%0Acounter%2Dincrement%3A%20figure%3B%0Acontent%3A%20%22Fig%20%22%20counter%28figure%29%20%22%3A%20%22%3B%0A%7D%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">R Installation</h1>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#install-r-on-ms-windows-modify-specification">Install R on MS Windows: modify specification</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#change-menu-language-as-english">Change menu language as English</a></li>
+<li><a href="#set-r-mirror-to-ustc-set-package-directory">set R mirror to ustc, set package directory</a></li>
+<li><a href="#package-update">package update</a></li>
+</ul></li>
+<li><a href="#install-r-on-ubuntu">Install R on Ubuntu</a><ul>
+<li><a href="#update-r">update R</a></li>
+<li><a href="#set-r-default-language-as-english">Set R default language as English</a></li>
+<li><a href="#set-r-mirror-as-ustc">set R mirror as ustc</a></li>
+<li><a href="#set-added-packages-installation-path-as-rlib">Set added packages installation path as “~/RLib”:</a></li>
+<li><a href="#change-timezone">Change timezone</a></li>
+<li><a href="#knitr-on-ubuntu-terminal">knitr on ubuntu terminal:</a></li>
+<li><a href="#misc">Misc</a></li>
+<li><a href="#rutter-ppa">RutteR PPA</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="install-r-on-ms-windows-modify-specification" class="section level2">
+<h2>Install R on MS Windows: modify specification</h2>
+<p>ref: <a href="http://statmath.wu.ac.at/software/R/qfin/" class="uri">http://statmath.wu.ac.at/software/R/qfin/</a></p>
+<div id="installation" class="section level3">
+<h3>Installation</h3>
+<ul>
+<li>Install the current version of R from <a href="http://CRAN.R-project.org/bin/windows/base/" class="uri">http://CRAN.R-project.org/bin/windows/base/</a></li>
+<li>Install <em>Rtools</em> from <a href="http://cran.at.r-project.org/bin/windows/Rtools/" class="uri">http://cran.at.r-project.org/bin/windows/Rtools/</a></li>
+</ul>
+<p>Suppose R is installed in the folder <code>d:/R</code></p>
+</div>
+<div id="change-menu-language-as-english" class="section level3">
+<h3>Change menu language as English</h3>
+<p>Edit file <code>d:/etc/Rconsole</code>, set the language as english: <code>language = english</code></p>
+</div>
+<div id="set-r-mirror-to-ustc-set-package-directory" class="section level3">
+<h3>set R mirror to ustc, set package directory</h3>
+<p>Edit file <code>d:/etc/Rprofile.site</code>, add the line below:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># the added packages are installed in this path</span>
+<span class="kw">.libPaths</span>(<span class="st">&quot;e:/RLib&quot;</span>)  
+   
+<span class="co">#  Modified the mirror and set rpubs</span>
+<span class="kw">options</span>(<span class="dt">repos =</span> <span class="kw">c</span>(<span class="dt">CRAN =</span> <span class="st">&quot;http://mirrors.aliyun.com/CRAN&quot;</span>,
+                  <span class="dt">CRANextra =</span> <span class="st">&quot;http://www.stats.ox.ac.uk/pub/RWin&quot;</span>),
+        <span class="dt">rpubs.upload.method =</span> <span class="st">&quot;internal&quot;</span>,
+        <span class="dt">defaultPackages =</span> <span class="kw">c</span>(<span class="kw">getOption</span>(<span class="st">'defaultPackages'</span>), <span class="st">'tibble'</span>)
+       )
+
+<span class="co">#  change timezone</span>
+<span class="kw">Sys.setenv</span>(<span class="dt">TZ=</span><span class="st">'Asia/Shanghai'</span>)
+
+<span class="co"># Add Welcome information</span>
+.First &lt;-<span class="st"> </span><span class="cf">function</span>(){
+          <span class="kw">cat</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Welcome to R, Rho! It's&quot;</span>, <span class="kw">date</span>(), <span class="st">&quot;.</span><span class="ch">\n</span><span class="st"> Have a good day. </span><span class="ch">\n\n</span><span class="st">&quot;</span>)}</code></pre></div>
+</div>
+<div id="package-update" class="section level3">
+<h3>package update</h3>
+<p>Whenever R’s new version appear, remove the old one, install the latest one, and enter this command:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">    <span class="kw">update.packages</span>(<span class="dt">lib.loc =</span> <span class="st">&quot;e:/Rlib&quot;</span>, <span class="dt">checkBuilt =</span> <span class="ot">TRUE</span>, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</code></pre></div>
+</div>
+</div>
+<div id="install-r-on-ubuntu" class="section level2">
+<h2>Install R on Ubuntu</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">  <span class="fu">sudo</span> apt-add-repository -y <span class="st">&quot;deb http://mirrors.xmu.edu.cn/CRAN/bin/linux/ubuntu </span><span class="kw">`</span><span class="ex">lsb_release</span> -cs<span class="kw">`</span><span class="st">/&quot;</span>
+  <span class="fu">sudo</span> apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+  <span class="fu">sudo</span> apt-get update
+  <span class="fu">sudo</span> apt-get install r-base-core r-base-dev r-base-html r-doc-html</code></pre></div>
+<div id="update-r" class="section level3">
+<h3>update R</h3>
+<p>Whenever there is a new R version, run the below on terminal:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">   <span class="fu">sudo</span> apt-get upgrade</code></pre></div>
+</div>
+<div id="set-r-default-language-as-english" class="section level3">
+<h3>Set R default language as English</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="fu">sudo</span> gedit /etc/R/Renviron</code></pre></div>
+<p>Add the line below: LANGUAGE = ‘en’</p>
+</div>
+<div id="set-r-mirror-as-ustc" class="section level3">
+<h3>set R mirror as ustc</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="fu">sudo</span> gedit /etc/R/Rprofile.site</code></pre></div>
+<p>Add the following lines:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">      <span class="kw">options</span>(<span class="dt">repos =</span> <span class="st">'https://mirrors.ustc.edu.cn/CRAN'</span>, <span class="dt">rpubs.upload.method =</span> <span class="st">'internal'</span>)</code></pre></div>
+<p>You can add any R command to this file, e.g.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">    .First &lt;-<span class="st"> </span><span class="cf">function</span>(){
+          <span class="kw">cat</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Welcome to R, Rho! It's&quot;</span>, <span class="kw">date</span>(), <span class="st">&quot;.</span><span class="ch">\n</span><span class="st"> Have a good day. </span><span class="ch">\n</span><span class="st">&quot;</span>)}</code></pre></div>
+</div>
+<div id="set-added-packages-installation-path-as-rlib" class="section level3">
+<h3>Set added packages installation path as “~/RLib”:</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">     <span class="fu">sudo</span> gedit /etc/R/Renviron.site</code></pre></div>
+<p>Add the following line:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">    R_LIBS =<span class="st"> </span><span class="er">~/</span>RLib</code></pre></div>
+</div>
+<div id="change-timezone" class="section level3">
+<h3>Change timezone</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> gedit /etc/R/Renviron.site</code></pre></div>
+<p>add this line:</p>
+<pre><code>TZ = 'Asia/Shanghai'</code></pre>
+</div>
+<div id="knitr-on-ubuntu-terminal" class="section level3">
+<h3>knitr on ubuntu terminal:</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">     <span class="bu">cd</span> my/Path
+     <span class="ex">Rscript</span> -e <span class="st">&quot;require('knitr'); knit('myFile.rnw')&quot;</span>
+     <span class="ex">xelatex</span> myFile</code></pre></div>
+</div>
+<div id="misc" class="section level3">
+<h3>Misc</h3>
+<div id="get-r-help-on-terminal" class="section level4">
+<h4>Get R help on terminal:</h4>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="ex">R</span> --help</code></pre></div>
+</div>
+<div id="get-r-path-on-terminal" class="section level4">
+<h4>Get R Path on terminal:</h4>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="fu">which</span> R</code></pre></div>
+</div>
+<div id="get-r-version-information-on-terminal" class="section level4">
+<h4>Get R version information on terminal:</h4>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="ex">R</span> --version</code></pre></div>
+<p>Packages for the CRAN repository are built on a Launchpad PPA called RutteR. It is possible to use the PPA itself, which includes a few more packages than the CRAN repository.</p>
+</div>
+</div>
+<div id="rutter-ppa" class="section level3">
+<h3>RutteR PPA</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> add-apt-repository ppa:marutter/rrutter
+<span class="fu">sudo</span> apt-get update</code></pre></div>
+<div id="install-xml-on-ubuntu" class="section level4">
+<h4>Install XML on ubuntu</h4>
+<pre><code>sudo apt-get install libxml2 libxml2-dev</code></pre>
+<p>Then <code>install.packages('XML')</code></p>
+</div>
+<div id="install-rcurl-on-ubuntu" class="section level4">
+<h4>Install RCurl on ubuntu</h4>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="fu">sudo</span> apt-get install libcurl4-openssl-dev</code></pre></div>
+<p>Then <code>install.packages('RCurl')</code></p>
+<p>Pls ref <a href="http://www.omegahat.org/RCurl/FAQ.html">RCurl FAQ</a></p>
+</div>
+<div id="install-rquantlib-on-ubuntu" class="section level4">
+<h4>Install RQuantLib on ubuntu</h4>
+<p>On ubuntu terminal</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">    <span class="fu">sudo</span> apt-get install libquantlib0-dev</code></pre></div>
+<p>On R, <code>install.packages('RQuantLib')</code></p>
+</div>
+<div id="installing-xlsx" class="section level4">
+<h4>Installing xlsx</h4>
+<ol style="list-style-type: decimal">
+<li>Installing openjdk version 7</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install openjdk-7-*</code></pre></div>
+<p>The installation is properly registered by your system using</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">update-alternatives</span> --config java</code></pre></div>
+<p>and choosing openjdk-7 as the default JVM.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Installing rjava</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> R CMD javareconf
+<span class="fu">sudo</span> apt-get install r-cran-rjava</code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Installing xlsx</li>
+</ol>
+<pre class="{r}"><code>install.packages(&quot;xlsx&quot;)</code></pre>
+<p>To search R’s package in <em>.deb</em> format, call to <a href="http://launchpad.net" class="uri">http://launchpad.net</a>.</p>
+</div>
+<div id="devtools" class="section level4">
+<h4>devtools</h4>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install gfortran build-essential libxt-dev libcurl4-openssl-dev libxml++2.6-dev libssl-dev</code></pre></div>
+<pre class="{r}"><code>install.packages('devtools')</code></pre>
+</div>
+</div>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

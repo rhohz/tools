@@ -1,14 +1,14 @@
 ---
 title: 'GitHub with RStudio on Windows'
 date: '2018-03-10'
-output: html_document
 ---
 
 Git is a version control system and allows you to save copies of your code throughout the entire developmental process.
 
 GitHub allows you to push your code from your local workspace to be hosted online. 
 
--Register an account on [GitHub](https://github.com), create a repository, say, tools
+- Register an account on [GitHub](https://github.com)
+- Create a repository, say, tools on GitHub
 - Download and install platform-specific version of git from [git-scm](http://git-scm.com/downloads)
 - Git configure: open the bash version of git and type:
 
@@ -21,7 +21,7 @@ git config --global user.email 'your_email_in_github'
 
 ![ssh key](tools_fig/sshKey_gitgui.png)
 
-- Add ssh key to github: in github website, settings --> ssh keys --> add ssh key
+- Add ssh key to github: in github website, settings --> ssh keys --> Add ssh key
 - Open rstudio and set the path to git executable: tools --> global options --> git/svn
 
 ![where is your git.exe file?](tools_fig/rstudioGitSet.png)
@@ -31,7 +31,7 @@ git config --global user.email 'your_email_in_github'
 	  * in rstudio, file --> new project --> version control -- git, paste repository path below 'repository url'
 	  
 - Commit and push: 
-    * right to git token, select 'commit' (or Ctrl + alt + M), check the files to commit, fill in something in commit message, and click commit
+    * right to git token, select 'commit' (or Ctrl + Alt + M), check the files to commit, fill in something in commit message, and click commit
 	  * click push, fill in uername and passward
 
 - open an existed project: file --> open project

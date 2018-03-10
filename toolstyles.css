@@ -1,5 +1,5 @@
 .title {
-  color: blue;
+  color: darkblue;
   font-size: 45px;
   font-weight: 900;
   text-align: center;
@@ -44,12 +44,10 @@ counter-reset:table figure;
 
 caption::before{
 counter-increment: table;
-content: "表 " counter(table) ": ";
+content: "table " counter(table) ": ";
 }
 
 .caption::before{
 counter-increment: figure;
-content: "图 " counter(figure) ": ";
+content: "Fig " counter(figure) ": ";
 }
-
-
